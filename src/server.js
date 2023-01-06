@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/cart', cart)
 app.use('/', express.static(path.join(__dirname, '../public')))
-app.use('*', (req, res) => res.status(404).json({ error: 'Not found.' }))
+app.use('*', (req, res) => res.status(404).json({ Error: 'Not found.' }))
 
 module.exports = app
 

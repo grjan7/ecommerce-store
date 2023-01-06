@@ -5,7 +5,7 @@ const axios = require('axios');
 class ConsumerAPI {
   /**
    * 
-   * @param {*} id 
+   * @param {*} productID
    * @returns 
    */
   static getProductByID = async (productID) => {
@@ -55,14 +55,6 @@ class ConsumerAPI {
     } else {
       throw new Error("Invalid postalCode. postalCode must be in the range of 465535 to 465545.")
     }
-  }
-
-  static getCalculatedShippingCost = async (cartID) => {
-
-  }
-
-  static getTotalBill = async (cartID) => {
-
   }
 }
 
