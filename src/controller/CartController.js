@@ -95,9 +95,21 @@ class CartController {
         const distance = await ConsumerAPI.getDistanceFromPostalCode(postalCode)
         const billDetails = await CartDAO.getWeightAndPriceAfterDiscount(customerID)
         const shippingCost = await ShippingChargeDAO.getCalculatedShippingCharge(billDetails.totalWeight, distance)
-        console.log(billDetails.totalWeight)
-        const totalAmount = billDetails.totalPrice + shippingCost
-        res.status(200).json({ totalAmount })
+
+        const checkOutValue = billDetails.totalDiscountedPrice + shippingCost
+
+        const checkOutValueDetails = {
+          customerID,
+          postalCode,
+          distance,
+          totalItems: billDetails.count,
+          totalWeightInKg: billDetails.totalWeight,
+          actualPrice: billDetails.totalActualPrice,
+          discountedPrice: billDetails.totalDiscountedPrice,
+          shippingCost,
+          checkOutValue
+        }
+        res.status(200).json(checkOutValueDetails)
       }
     } catch (ex) {
       res.status(404).json({ Error: `No items found for this customerID ${customerID}.` })

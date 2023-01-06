@@ -48,6 +48,7 @@ class CartDAO {
       },
       {
         $project: {
+          "price": "$product.price",
           "priceAfterDiscount": {
             $subtract: ["$product.price",
               {
@@ -61,15 +62,19 @@ class CartDAO {
       {
         $group: {
           _id: null,
-          totalPrice: { $sum: "$priceAfterDiscount" },
-          totalWeight: { $sum: "$weight" }
+          totalActualPrice: { $sum: "$price" },
+          totalDiscountedPrice: { $sum: "$priceAfterDiscount" },
+          totalWeight: { $sum: "$weight" },
+          count: { $sum: 1 }
         }
       },
       {
         $project: {
           _id: 0,
-          totalPrice: { $round: ["$totalPrice", 2] },
-          totalWeight: { $round: [{ $divide: ["$totalWeight", 1000] }, 3] }
+          count: 1,
+          "totalActualPrice": { $round: ["$totalActualPrice", 2] },
+          "totalDiscountedPrice": { $round: ["$totalDiscountedPrice", 2] },
+          "totalWeight": { $round: [{ $divide: ["$totalWeight", 1000] }, 3] }
         }
       }
     ]

@@ -83,7 +83,17 @@ curl -X GET "http://localhost:8080/cart/checkout-value/465536?customerID=1" -H '
 #### Response
 
 ```JSON
-{"totalAmount":436.62}
+{
+  "customerID": "1",
+  "postalCode": "465536",
+  "distance": 220,  
+  "totalItems": 3,
+  "totalWeightInKg": 1.16,
+  "actualPrice": 148.24,
+  "discountedPrice": 139.6,
+  "shippingCost": 50, 
+  "checkOutValue": 189.6
+  }
 ```
 
 
