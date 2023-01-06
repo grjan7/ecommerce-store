@@ -1,0 +1,376 @@
+[
+  {
+    "weight": {
+      "min": 0,
+      "max": 2,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 0,
+      "max": 5,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 12,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 0,
+      "max": 2,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 5,
+      "max": 20,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 15,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 0,
+      "max": 2,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 20,
+      "max": 50,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 20,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 0,
+      "max": 2,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 50,
+      "max": 500,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 50,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 0,
+      "max": 2,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 500,
+      "max": 800,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 100,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 0,
+      "max": 2,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 800,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 220,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 2,
+      "max": 5,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 0,
+      "max": 5,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 14,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 2,
+      "max": 5,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 5,
+      "max": 20,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 18,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 2,
+      "max": 5,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 20,
+      "max": 50,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 24,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 2,
+      "max": 5,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 50,
+      "max": 500,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 55,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 2,
+      "max": 5,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 500,
+      "max": 800,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 110,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 2,
+      "max": 5,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 800,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 250,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 5,
+      "max": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 0,
+      "max": 5,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 16,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 5,
+      "max": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 5,
+      "max": 20,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 25,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 5,
+      "max": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 20,
+      "max": 50,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 30,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 5,
+      "max": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 50,
+      "max": 500,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 80,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 5,
+      "max": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 500,
+      "max": 800,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 130,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 5,
+      "max": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 800,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 270,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 0,
+      "max": 5,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 21,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 5,
+      "max": 20,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 35,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 20,
+      "max": 50,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 50,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 50,
+      "max": 500,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 90,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 500,
+      "max": 800,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 150,
+      "unit": "usd"
+    }
+  },
+  {
+    "weight": {
+      "min": 20,
+      "unit": "kg"
+    },
+    "distance": {
+      "min": 800,
+      "unit": "km"
+    },
+    "price": {
+      "amount": 300,
+      "unit": "usd"
+    }
+  }
+]
