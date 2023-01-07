@@ -5,8 +5,9 @@ const axios = require('axios');
 class ConsumerAPI {
   /**
    * 
-   * @param {*} productID
-   * @returns 
+   * @param {number} productID -- valid range 100 - 119 
+   * @returns {object} fetched product data for the given productID
+   * 
    */
   static getProductByID = async (productID) => {
     const isValidProductID = productID >= 100 && productID <= 119;
@@ -32,8 +33,9 @@ class ConsumerAPI {
 
   /**
    * 
-   * @param {*} postalCode 
-   * @returns 
+   * @param {number} postalCode -- valid range 465535 - 465545  
+   * @returns {object} fetched distance data for the given shipping postal code
+   * 
    */
   static getDistanceFromPostalCode = async (postalCode) => {
     const isValidPostalCode = postalCode >= 465535 && postalCode <= 465545;

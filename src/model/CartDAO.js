@@ -1,9 +1,15 @@
 'use strict'
 
-const { ObjectId } = require('bson')
 let carts
 
 class CartDAO {
+  /**
+   * 
+   * @param {MongoClient} conn
+   * @returns 
+   * @description
+   * Checks if the carts collection exists and creates the handle for it if it does not. 
+   */
   static injectDB = async (conn) => {
     if (carts) {
       return
@@ -42,6 +48,35 @@ class CartDAO {
   }
 
   static getWeightAndPriceAfterDiscount = async (customerID) => {
+    /**
+     * This aggregation pipeline has four stages
+     * 
+     * stage 1: filters the collection by customerID
+     * 
+     * stage 2: computes dicount and adds field priceAfterDiscount for each document
+     *          
+     *  formula:
+     *    discountedPrice = price - (price * (discount_percentage/100))
+     * 
+     * stage 3: groups the collection
+     *      -- adds all prices and saves as totalActualPrice
+     *      -- adds all pricesAfterDiscount and saves as totalDiscountedPrice
+     *      -- adds all weights and saves as totalWeight
+     *      -- counts the total items and saves as count
+     * 
+     * stage 4: drops _id property and projects rest of the fields with their rounded value.
+     *  -- converts grams to kilograms
+     * 
+     * Finally, it returns
+     *   
+     * [{
+     * count:5,
+     * totalActualPrice: 440.25,
+     * totalDiscountedPrice: 350.25,
+     * totalWeight: 6.253
+     * }]
+     * 
+     */
     const pipeline = [
       {
         $match: { customerID }

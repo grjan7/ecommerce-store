@@ -14,8 +14,11 @@ MongoClient.connect(
   console.error(err.stack)
   process.exit(1)
 }).then(async client => {
+  // Sets up the collection handles on successful connection establishment
+  // to the MongoDB server.
   await ShippingChargeDAO.injectDB(client)
   await CartDAO.injectDB(client)
+
   app.listen(port, () => {
     console.log(`listening on port ${port}`)
   })

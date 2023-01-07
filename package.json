@@ -1,10 +1,10 @@
 {
   "name": "ecommerce-store",
   "version": "1.0.0",
-  "description": "",
+  "description": "Square Shift's coding challange for consuming and producing REST APIs in Node.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "start": "node ./index.js"
   },
   "keywords": [],
   "author": "Jana Rangasamy <janagr7@gmail.com>",

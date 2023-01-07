@@ -7,6 +7,12 @@ const ConsumerAPI = require('./ConsumerAPI')
 class CartController {
 
   static apiAddItemToCartByCustomerID = async (req, res, next) => {
+    /**
+     * Fetches product data by productID.
+     * Adds customerID to product data.
+     * Adds product data as an item to cart.
+     *  
+     */
     let customerID, productID
     const query = req.query
     if (!!query) {
@@ -40,6 +46,9 @@ class CartController {
   }
 
   static apiListItems = async (req, res, next) => {
+    /**
+     * Lists the items in the cart for the given customerID.
+     */
     let customerID
     const query = req.query
     if (!!query) {
@@ -59,6 +68,10 @@ class CartController {
   }
 
   static apiDeleteCart = async (req, res, next) => {
+    /**
+     * Deletes all items in the cart for the given customerID.
+     * 
+     */
     let customerID
     const query = req.query
     if (!!query) {
@@ -76,6 +89,28 @@ class CartController {
   }
 
   static apiGetCheckOutValueByPostCode = async (req, res, next) => {
+    /**
+     * Gets distance for the given shipping_postalcode
+     * Gets computed weight and price details of the items in the cart 
+     * for the given customerID.
+     * Gets the shipping cost for the given weight and distance.
+     * Computes the checkOutValue.
+     * 
+     * returns
+     * 
+     * {
+     * customerID,
+     * postalCode,
+     * distance,
+     * totalItems,
+     * totalWeightInKg,
+     * actualPrice,
+     * discountedPrice,
+     * shippingCost,
+     * checkOutValue
+     * }
+     * 
+     */
     let customerID, postalCode
     const query = req.query
     const params = req.params
