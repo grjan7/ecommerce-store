@@ -7,7 +7,7 @@ Square Shift Ecommerce Node API
 ### POST /cart/item
 
 ```ssh
-curl -X GET "http://localhost:8080/cart/item?customerID=1&productID=101" -H 'accept:*/*'
+curl -X GET "https://ecom-store-node-api.onrender.com/cart/item?customerID=1&productID=101" -H 'accept:*/*'
 ```
 
 #### Request Parameters
@@ -25,7 +25,7 @@ curl -X GET "http://localhost:8080/cart/item?customerID=1&productID=101" -H 'acc
 ### GET /cart/items
 
 ```ssh
-curl -X GET "http://localhost:8080/cart/items?customerID=1" -H 'accept:*/*'
+curl -X GET "https://ecom-store-node-api.onrender.com/cart/items?customerID=1" -H 'accept:*/*'
 ```
 
 #### Request Parameters
@@ -69,7 +69,7 @@ curl -X GET "http://localhost:8080/cart/items?customerID=1" -H 'accept:*/*'
 ### GET /cart/checkout-value
 
 ```ssh
-curl -X GET "http://localhost:8080/cart/checkout-value/465536?customerID=1" -H 'accept:*/*'
+curl -X GET "https://ecom-store-node-api.onrender.com/cart/checkout-value/465536?customerID=1" -H 'accept:*/*'
 ```
 
 #### Request Parameters
@@ -100,7 +100,7 @@ curl -X GET "http://localhost:8080/cart/checkout-value/465536?customerID=1" -H '
 ### DELETE /cart
 
 ```ssh
-curl -X DELETE "http://localhost:8080/cart?customerID=1" -H 'accept:*/*'
+curl -X DELETE "https://ecom-store-node-api.onrender.com/cart?customerID=1" -H 'accept:*/*'
 ```
 
 #### Request Parameters
